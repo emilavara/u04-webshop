@@ -23,6 +23,10 @@ section {
         img {
             transform: scale(1.10);
         }
+
+        .card-title {
+            text-decoration: underline;
+        }
     }
     
     .card-category {
