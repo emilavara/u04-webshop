@@ -1,0 +1,117 @@
+section {
+    max-width: 1400px;
+    margin: auto;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+
+    @media (max-width: 768px) {
+        padding: 8rem 1rem;
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: var(--black);
+    text-decoration: none;
+    animation: appear ease;
+    animation-timeline: view();
+    animation-range: entry 0%;
+
+    .card-category {
+        margin-bottom: -1rem;
+        background-color: var(--primary-color);
+        width: fit-content;
+        padding: 0.25rem 0.75rem;
+        font-size: 0.875rem;
+        letter-spacing: -0.02em;
+        font-weight: 600;
+        color: var(--white);
+        text-transform: uppercase;
+        position: relative;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+
+        &::after {
+            height: 100%;
+            width: 1rem;
+            background: var(--white);
+            content: "";
+            top: 0;
+            right: -1rem;
+            display: block;
+            position: absolute;
+            border-radius: 0 8px;
+        }
+
+        &::before {
+            height: 100%;
+            width: 1rem;
+            background: var(--primary-color);
+            content: "";
+            top: 0;
+            right: -1rem;
+            position: absolute;
+            display: block;
+            border-top-right-radius: 10px;
+        }
+    }
+
+    .card-text-container {
+        .card-title {
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            font-weight: 500;
+        }
+    }
+
+    .card-image {
+        height: 26.375rem;
+        width: 100%;
+        object-fit: contain;
+        border: 1px solid #e3e3e3;
+        border-radius: 0.5rem;
+        padding: 2rem;
+        border-top-left-radius: 0;
+    }
+
+    hr {
+        margin: 1rem auto;
+        width: 25%;
+        border-color: var(--primary-color);        
+    }
+
+    .card-price-rating-container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+
+        .card-rating {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            .card-star-container {
+                display: flex;
+                gap: 0.25rem;
+                color: gold;
+            }
+        }
+    }
+}
+
+
+@keyframes appear {
+    from {
+        transform: translateY(15rem);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+}
