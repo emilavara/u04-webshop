@@ -66,6 +66,7 @@ section {
             text-overflow: ellipsis;
             display: -webkit-box;
             font-weight: 500;
+            min-height: 3rem;
         }
     }
 
@@ -94,10 +95,49 @@ section {
             display: flex;
             gap: 0.5rem;
             align-items: center;
+            
             .card-star-container {
                 display: flex;
                 gap: 0.25rem;
-                color: gold;
+                color: #f2f2f2;
+                
+                &.star-count-1 {
+                    .star {
+                        &:nth-child(1) {
+                            color: gold;
+                        }
+                    }
+                }
+
+                &.star-count-2 {
+                    .star {
+                        &:nth-child(1), &:nth-child(2) {
+                            color: gold;
+                        }
+                    }
+                }
+
+                &.star-count-3 {
+                    .star {
+                        &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+                            color: gold;
+                        }
+                    }
+                }
+                
+                &.star-count-4 {
+                    .star {
+                        &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+                            color: gold;
+                        }
+                    }
+                }
+
+                &.star-count-5 {
+                    .star {
+                        color: gold;
+                    }
+                }
             }
         }
     }
