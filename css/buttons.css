@@ -1,0 +1,23 @@
+.sss-btn {
+    font-size: 1rem;
+    font-family: 'Inter';
+    border: none;
+    padding: 1rem 8rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    border-radius: 8px;
+    width: fit-content;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+
+    &.primary {
+        color: white;
+        background-color: var(--primary-color);
+
+        &:hover {
+            background-color: color(
+                from var(--primary-color) display-p3 r calc(g - 0.15) calc(b - 0.15)
+            )
+        }
+    }
+}

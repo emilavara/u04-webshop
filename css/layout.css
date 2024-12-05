@@ -159,6 +159,104 @@ section {
     }
 }
 
+.product-image-container {
+    height: 34.875rem;
+    border: 1px solid #e3e3e3;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    padding: 2rem;
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+}
+
+.product-info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: space-around;
+    padding: 2.5rem 0;
+
+    .top-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .product-category {
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        font-size: 0.875rem;
+        color: white;
+        background-color: var(--primary-color);
+        padding: 0.25rem 0.5rem;
+        width: fit-content;
+        border-radius: 0.25rem;
+    }
+
+    .product-rating-container {
+        display: flex;
+        gap: 0.5rem;
+
+        .product-star-container {
+            display: flex;
+            gap: 0.25rem;
+
+            .star {
+                color: #f2f2f2;
+            }
+
+            &.star-count-1 {
+                .star {
+                    &:nth-child(1) {
+                        color: gold;
+                    }
+                }
+            }
+
+            &.star-count-2 {
+                .star {
+                    &:nth-child(1), &:nth-child(2) {
+                        color: gold;
+                    }
+                }
+            }
+
+            &.star-count-3 {
+                .star {
+                    &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+                        color: gold;
+                    }
+                }
+            }
+            
+            &.star-count-4 {
+                .star {
+                    &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+                        color: gold;
+                    }
+                }
+            }
+
+            &.star-count-5 {
+                .star {
+                    color: gold;
+                }
+            }
+        }
+
+        h6 {
+            font-weight: 500;
+        }
+    }
+
+    .product-price {
+        font-size: 3rem;
+    }
+}
 
 @keyframes appear {
     from {
