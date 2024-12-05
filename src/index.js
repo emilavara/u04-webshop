@@ -22,7 +22,9 @@ function renderProducts() {
 
         div.innerHTML = `
             <div class="card-category">${product.category}</div>
-            <img loading="lazy" class="card-image" src="${product.image}">
+            <div class="image-container">
+                <img loading="lazy" class="card-image" src="${product.image}">
+            </div>
             <div class="card-text-container">
                 <h2 class="card-title h4">${product.title}</h2>
                 <hr>
