@@ -1,13 +1,6 @@
-import { fetchProducts } from "./main.js";
+import { products } from "./fetch.js";
 
 const allProductsSection = document.getElementById('section-all-products');
-
-let products = []
-
-fetchProducts().then(data => {
-    products = data
-    renderProducts();
-})
 
 function renderProducts() {
     products.forEach((product) => {
@@ -56,3 +49,5 @@ function renderProducts() {
         allProductsSection.append(div)
     })
 }
+
+renderProducts();

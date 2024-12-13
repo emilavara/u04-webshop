@@ -1,3 +1,7 @@
+main {
+    margin-top: 6.5rem;
+}
+
 section {
     max-width: 1400px;
     margin: auto;
@@ -195,6 +199,7 @@ section {
         padding: 0.25rem 0.5rem;
         width: fit-content;
         border-radius: 0.25rem;
+        text-transform: uppercase;
     }
 
     .product-rating-container {

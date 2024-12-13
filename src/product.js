@@ -1,12 +1,6 @@
-import { fetchProducts } from "./main.js";
+import { products } from "./fetch.js";
+
 const productSection = document.getElementById('section-product')
-
-let products = []
-
-fetchProducts().then(data => {
-    products = data
-    renderProduct();
-})
 
 function renderProduct() {
     let params = new URLSearchParams(window.location.search)
@@ -30,7 +24,7 @@ function renderProduct() {
 
     infoContainer.innerHTML = `
         <div class="top-container">
-            <div class="product-category">MEN'S CLOTHING</div>
+            <div class="product-category">${product.category}</div>
             <h1 class="product-title">${product.title}</h1>
             <div class="product-rating-container">
                 <div class="product-star-container ${determineStars()}">
@@ -60,3 +54,5 @@ function renderProduct() {
     productSection.appendChild(imageContainer)
     productSection.appendChild(infoContainer)
 }
+
+renderProduct();

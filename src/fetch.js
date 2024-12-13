@@ -1,4 +1,4 @@
-export async function fetchProducts() {
+async function getProducts() {
     //check if products key exists in ls
     if (localStorage.getItem('products') === null) {
         //fetch if null is returned
@@ -14,3 +14,6 @@ export async function fetchProducts() {
         return JSON.parse(localStorage.getItem('products'))
     }
 }
+
+//export products array, wait for getProducts() to finish
+export const products = await getProducts();
