@@ -13,14 +13,14 @@
                 <h6>shopshopshop</h6>
             </div>
             <div class="input-container">
-                <input type="text" name="" id="">
+                <input type="text" name="" id="filter-products">
             </div>
             <div class="button-container">
                 <!-- <i class="bi bi-bag"></i>
                 <i class="bi bi-person"></i> -->
                 <button class="cart-btn">
                     <i class="bi bi-bag"></i>
-                    <div class="cart-items">2</div>
+                    <div class="cart-items">8</div>
                 </button>
                 <button><i class="bi bi-person"></i></button>
             </div>
@@ -36,7 +36,39 @@
         </div>
     </header>
     <main>
-        <section id="section-all-products" class="ea-grid"></section>
+        <section class="thing ea-grid" style="padding: 0;">
+            <div class="ea-col-8"><h1>Text</h1></div>
+            <div class="ea-col-4">
+                <fieldset>
+                    <legend>kategori sortering typ</legend>
+                    <div>
+                        <input type="radio" id="all" name="category" value="all" checked />
+                        <label for="all">All</label>
+                      </div>
+                  
+                    <div>
+                      <input type="radio" id="mens-clothing" name="category" value="men's clothing" />
+                      <label for="mens-clothing">men's clothing</label>
+                    </div>
+                  
+                    <div>
+                      <input type="radio" id="mens-clothing" name="category" value="women's clothing" />
+                      <label for="womens-clothing">women's clothing</label>
+                    </div>
+                  
+                    <div>
+                      <input type="radio" id="electronics" name="category" value="electronics" />
+                      <label for="electronics">electronics</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="jewelery" name="category" value="jewelery" />
+                        <label for="jewelery">jewelery</label>
+                    </div>
+                  </fieldset>
+            </div>
+        </section>
+        <section id="section-all-products" class="ea-grid">
+        </section>
     </main>
     <script src="src/fetch.js" type="module"></script>
     <script src="src/index.js" type="module"></script>

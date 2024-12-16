@@ -2,8 +2,13 @@ import { products } from "./fetch.js";
 
 const allProductsSection = document.getElementById('section-all-products');
 
-function renderProducts() {
-    products.forEach((product) => {
+function renderProducts(arr) {
+    console.log(arr)
+    //clear existing html
+    allProductsSection.innerHTML = ''
+
+    //loop out array from parameter
+    arr.forEach((product) => {
         let div = document.createElement('a')
         div.className = 'card ea-col-3 ea-col-xs-12';
         div.href = '/product.html?id=' + product.id
@@ -50,4 +55,44 @@ function renderProducts() {
     })
 }
 
-renderProducts();
+function renderFilteredProducts(category) {
+    const filtered = products.filter((product) => {
+        return product.category === category
+    })
+
+    renderProducts(filtered)
+}
+
+function searchProducts(value) {
+    const search = products.filter((product) => {
+        return product.title.toLowerCase().includes(value.toLowerCase()) || product.category.toLowerCase().includes(value.toLowerCase())
+    })
+
+    renderProducts(search)
+}
+//vi tar in radio buttons med värde som matchar kategori
+//event listnere on click som kör funktionen ovan
+
+const radioButtons = document.querySelectorAll('input[type=radio]')
+radioButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        if (button.value === 'all') {
+            renderProducts(products)
+        } else {
+            renderFilteredProducts(button.value)
+        }
+    })
+})
+
+const input = document.getElementById('filter-products')
+input.addEventListener('keypress', (e) => {
+    if (e.key === "Enter") {
+        if (input.value === '') {   
+            renderProducts(products)
+        } else {
+            searchProducts(input.value)
+        }
+    }
+})
+
+renderProducts(products)
