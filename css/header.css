@@ -6,11 +6,12 @@ header {
     display: flex;
     flex-direction: column;
     border-top: 4px var(--primary-color) solid;
-    position: relative;
     position: fixed;
     background-color: var(--bg-color);
     z-index: 1;
     top: 0;
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
 
     .top-container {
         height: 4rem;
