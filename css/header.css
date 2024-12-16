@@ -103,7 +103,7 @@ header {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 4rem;
+        gap: 2rem;
         
         ul {
             margin: 0;
@@ -127,6 +127,8 @@ header {
 
         label {
             width: fit-content;
+            cursor: pointer;
+
             input[type=radio] {
                 appearance: none;
                 display: none;
@@ -142,6 +144,8 @@ header {
             }
 
             span {
+                background-color: transparent;
+                transition: all 0.1s ease;
                 font-weight: 600;
                 padding: 0.15rem 0.55rem;
             }
