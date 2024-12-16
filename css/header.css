@@ -103,6 +103,7 @@ header {
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: 4rem;
         
         ul {
             margin: 0;
@@ -121,6 +122,28 @@ header {
                     padding: 0.15rem 0.75rem;
                     border-radius: 4px;
                 }
+            }
+        }
+
+        label {
+            width: fit-content;
+            input[type=radio] {
+                appearance: none;
+                display: none;
+
+                &:checked {
+                    ~ span {
+                        background-color: var(--primary-color);
+                        color: white;
+                        padding: 0.15rem 0.55rem;
+                        border-radius: 4px;
+                    }
+                }
+            }
+
+            span {
+                font-weight: 600;
+                padding: 0.15rem 0.55rem;
             }
         }
     }

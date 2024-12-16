@@ -70,9 +70,9 @@ function searchProducts(value) {
 
     renderProducts(search)
 }
+
 //vi tar in radio buttons med värde som matchar kategori
 //event listnere on click som kör funktionen ovan
-
 const radioButtons = document.querySelectorAll('input[type=radio]')
 radioButtons.forEach((button) => {
     button.addEventListener('click', () => {

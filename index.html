@@ -26,46 +26,39 @@
             </div>
         </div>
         <div class="category-container">
-            <ul>
+            <!-- <ul>
                 <li class="h6 active">All</li>
                 <li class="h6">Men's Clothing</li>
                 <li class="h6">Women's Clothing</li>
                 <li class="h6">Jewelery</li>
                 <li class="h6">Electronics</li>
-            </ul>
+            </ul> -->
+            <label>
+                <input type="radio" name="category" value="all" checked>
+                <span>All</span>
+            </label>
+            <label>
+                <input type="radio" name="category" value="men's clothing">
+                <span>Men's Clothing</span>
+            </label>
+            <label>
+                <input type="radio" name="category" value="women's clothing">
+                <span>Women's Clothing</span>
+            </label>
+            <label>
+                <input type="radio" name="category" value="jewelery">
+                <span>Jewelery</span>
+            </label>
+            <label>
+                <input type="radio" name="category" value="electronics">
+                <span>Electronics</span>
+            </label>
         </div>
     </header>
     <main>
         <section class="thing ea-grid" style="padding: 0;">
             <div class="ea-col-8"><h1>Text</h1></div>
             <div class="ea-col-4">
-                <fieldset>
-                    <legend>kategori sortering typ</legend>
-                    <div>
-                        <input type="radio" id="all" name="category" value="all" checked />
-                        <label for="all">All</label>
-                      </div>
-                  
-                    <div>
-                      <input type="radio" id="mens-clothing" name="category" value="men's clothing" />
-                      <label for="mens-clothing">men's clothing</label>
-                    </div>
-                  
-                    <div>
-                      <input type="radio" id="mens-clothing" name="category" value="women's clothing" />
-                      <label for="womens-clothing">women's clothing</label>
-                    </div>
-                  
-                    <div>
-                      <input type="radio" id="electronics" name="category" value="electronics" />
-                      <label for="electronics">electronics</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="jewelery" name="category" value="jewelery" />
-                        <label for="jewelery">jewelery</label>
-                    </div>
-                  </fieldset>
-            </div>
         </section>
         <section id="section-all-products" class="ea-grid">
         </section>
