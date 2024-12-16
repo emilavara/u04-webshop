@@ -2,8 +2,12 @@ import { products } from "./fetch.js";
 
 const allProductsSection = document.getElementById('section-all-products');
 
+let isRendering = false;
+
 function renderProducts(arr) {
     console.log(arr)
+    if (isRendering) return
+    isRendering = true
     //clear existing html
     allProductsSection.innerHTML = ''
 
@@ -52,6 +56,8 @@ function renderProducts(arr) {
             </div>
         `
         allProductsSection.append(div)
+
+        isRendering = false
     })
 }
 

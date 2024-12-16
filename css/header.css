@@ -12,6 +12,10 @@ header {
     z-index: 1;
     top: 0;
 
+    &.product-page {
+        height: 4rem;
+    }
+
     .top-container {
         height: 4rem;
         display: flex;

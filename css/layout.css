@@ -5,8 +5,17 @@ main {
 section {
     max-width: 1400px;
     margin: auto;
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+
+    &#section-all-products, &#section-details {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    
+
+    &.hero {
+        padding-top: 4rem;
+    }
 
     @media (max-width: 768px) {
         padding: 8rem 1rem;
@@ -260,6 +269,38 @@ section {
 
     .product-price {
         font-size: 3rem;
+    }
+}
+
+.details-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    details {
+
+        summary {
+            cursor: pointer;
+            user-select: none;
+            list-style: none;
+            padding-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            i {
+                font-weight: 700;
+                font-size: 1.375rem;
+                transition: transform 0.2s ease;
+            }
+        }
+
+        &[open] {
+            summary {
+                i {
+                    transform: rotate(180deg);
+                }
+            }
+        }
     }
 }
 
