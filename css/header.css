@@ -5,15 +5,33 @@ header {
     padding-right: calc(50vw - 1400px / 2);
     display: flex;
     flex-direction: column;
-    border-top: 4px var(--primary-color) solid;
+    border-top: 0.25rem var(--primary-color) solid;
     position: relative;
     position: fixed;
     background-color: var(--bg-color);
-    z-index: 1;
+    z-index: 3;
     top: 0;
+
+    @media (max-width: 1432px) {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    @media (max-width: 768px) {
+        height: 4rem;
+        border-bottom: 1px solid #e3e3e3;
+
+        input[type=text] {
+            display: none;
+        }
+    }
 
     &.product-page {
         height: 4rem;
+
+        input[type=text] {
+            display: none;
+        }
     }
 
     .top-container {
@@ -40,6 +58,10 @@ header {
                 letter-spacing: -0.02em;
                 font-weight: 500;
                 padding-left: 0.5rem;
+
+                &::placeholder {
+                    font-size: 0.85rem;
+                }
 
                 &:hover {
                     outline: 1px solid #e3e3e3;
@@ -97,6 +119,7 @@ header {
 
                 i {
                     font-size: 1.25rem;
+                    color: black;
                 }
             }
         }
@@ -108,6 +131,10 @@ header {
         align-items: center;
         justify-content: center;
         gap: 2rem;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
         
         ul {
             margin: 0;

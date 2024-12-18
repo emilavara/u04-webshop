@@ -5,7 +5,7 @@ const allProductsSection = document.getElementById('section-all-products');
 let isRendering = false;
 
 function renderProducts(arr) {
-    console.log(arr)
+    //recursion protection
     if (isRendering) return
     isRendering = true
     //clear existing html
@@ -25,7 +25,7 @@ function renderProducts(arr) {
         div.innerHTML = `
             <div class="card-category">${product.category}</div>
             <div class="image-container">
-                <img loading="lazy" class="card-image" src="${product.image}">
+                <img loading="lazy" class="card-image" alt="${product.title}" src="${product.image}">
             </div>
             <div class="card-text-container">
                 <h2 class="card-title h4">${product.title}</h2>
@@ -77,8 +77,7 @@ function searchProducts(value) {
     renderProducts(search)
 }
 
-//vi tar in radio buttons med värde som matchar kategori
-//event listnere on click som kör funktionen ovan
+const currentCategoryText = document.getElementById('currentCategoryText')
 const radioButtons = document.querySelectorAll('input[type=radio]')
 radioButtons.forEach((button) => {
     button.addEventListener('click', () => {
@@ -87,6 +86,8 @@ radioButtons.forEach((button) => {
         } else {
             renderFilteredProducts(button.value)
         }
+
+        currentCategoryText.textContent = button.value;
     })
 })
 
@@ -94,11 +95,54 @@ const input = document.getElementById('filter-products')
 input.addEventListener('keypress', (e) => {
     if (e.key === "Enter") {
         if (input.value === '') {   
+            radioButtons[0].checked = true;
+            currentCategoryText.textContent = 'All';
+
             renderProducts(products)
         } else {
             searchProducts(input.value)
         }
     }
 })
+
+const sortCategorySelectbox = document.getElementById('sortCategorySelectbox');
+const sortCategorySelectboxSelected = document.getElementById('currentSortFilter')
+const sortCategorySelectboxOptions = document.querySelectorAll('.custom-selectbox-option')
+
+sortCategorySelectbox.addEventListener('click', () => {
+	sortCategorySelectbox.classList.toggle('open')
+})
+
+sortCategorySelectboxOptions.forEach((option) => {
+    option.addEventListener('click', (e) => {
+        sortProducts(option.dataset.sortValue, option.dataset.sortTitle)
+    })
+})
+
+function sortProducts(value, valueText) {
+    let sorted = [];
+    
+    if (value === 'relevance') {
+        sorted = products
+    } else if (value === 'price-asc') {
+        sorted = products.sort((a, b) => a.price - b.price)
+    } else if (value === 'price-desc') {
+        sorted = products.sort((a, b) => a.price - b.price)
+        sorted.reverse()
+    } else if (value === 'a-to-z') {
+        sorted = products.sort((a, b) => a.title.toLowerCase().localeCompare(b.title.toLowerCase()))
+    } else if (value === 'z-to-a') {
+        sorted = products.sort((b, a) => b.title.toLowerCase().localeCompare(a.title.toLowerCase()))
+        sorted.reverse();
+    }
+    
+    sortCategorySelectboxSelected.textContent = valueText
+    renderProducts(sorted)
+}
+
+//init cart key if null in localstorage
+if (localStorage.getItem('cart') === null) {
+    localStorage.setItem('cart', '[]')
+}
 
 renderProducts(products)

@@ -1,20 +1,45 @@
 main {
     margin-top: 6.5rem;
+
+    @media (max-width: 768px) {
+        margin-top: 4rem;
+    }
 }
 
 section {
     max-width: 1400px;
     margin: auto;
 
+    padding-left: 1rem;
+    padding-right: 1rem;
+
     &#section-all-products, &#section-details {
         padding-top: 4rem;
         padding-bottom: 4rem;
+
+        @media (max-width: 768px) {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
     }
 
-    
+    &#section-product {
+        min-height: 34.875rem;
+
+        @media (max-width: 768px) {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            row-gap: 0rem;
+        }
+    }
 
     &.hero {
         padding-top: 4rem;
+
+        @media (max-width: 768px) {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
     }
 
     @media (max-width: 768px) {
@@ -276,8 +301,8 @@ section {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    
     details {
-
         summary {
             cursor: pointer;
             user-select: none;
@@ -301,6 +326,97 @@ section {
                 }
             }
         }
+
+        &.disabled {
+            opacity: 0.25;
+            pointer-events: none;
+        }
+    }
+}
+
+.hero-title-container {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    height: 3rem;
+
+    .custom-selectbox-wrapper {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        width: 10.1875rem;
+        height: 3rem;
+        border-radius: 0.35rem;
+        background-color: black;
+        font-family: 'Inter';
+        font-weight: 700;
+        font-size: 0.75rem;
+        color: white;
+        overflow: hidden;
+        text-align: center;
+        transition: height 0.35s cubic-bezier(0.445,  0.050, 0.550, 0.950);
+        
+        &.open {
+            height: 15rem;
+        }
+        
+        #custom-selectbox-selected, .custom-selectbox-option {
+            display: flex;
+            align-items: center;
+            height: 3rem;
+            cursor: pointer;
+            justify-content: center;
+            padding: 0 0.85rem;
+            user-select: none;
+            
+            #currentSortFilter {
+                margin-left: 0.5rem;
+                /* margin-right: 0.45rem; */
+            }
+        }
+        
+        .custom-selectbox-option:hover {
+            background: #252525;
+        }
+    }
+}
+
+.hero-selectbox-container {
+    position: relative;
+    height: 3rem;
+    
+    
+}
+
+#currentCategoryText {
+    text-transform: capitalize;
+}
+
+.card-skeleton {
+    height: 34.875rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .image-skeleton, .title-skeleton, .price-skeleton {
+        background: linear-gradient(90deg, #f2f2f2 40%, #fafafa, #f2f2f2 60%) right / 300% 100%;
+        animation: skeletonLoading 1.5s ease infinite;
+    }
+
+    .image-skeleton {
+        border-radius: 0.5rem;
+        height: 29.1875rem;
+    }
+
+    .title-skeleton {
+        border-radius: 0.5rem;
+        height: 3rem;
+    }
+
+    .price-skeleton {
+        border-radius: 0.5rem;
+        height: 1.8125rem;
     }
 }
 
@@ -313,5 +429,11 @@ section {
     to {
         transform: translateY(0rem);
         opacity: 1;
+    }
+}
+
+@keyframes skeletonLoading {
+    to {
+        background-position-x: left;
     }
 }

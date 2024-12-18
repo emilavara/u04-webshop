@@ -13,12 +13,12 @@
                 <h6>shopshopshop</h6>
             </div>
             <div class="input-container">
-                <input type="text" name="" id="filter-products">
+                <input placeholder="Search..." type="text" name="" id="filter-products">
             </div>
             <div class="button-container">
                 <button class="cart-btn">
                     <i class="bi bi-bag"></i>
-                    <div class="cart-items">8</div>
+                    <div id="cartCountButton" class="cart-items">0</div>
                 </button>
                 <button><i class="bi bi-person"></i></button>
             </div>
@@ -47,11 +47,102 @@
         </div>
     </header>
     <main>
-        <section class="hero ea-grid" style="padding: 0;">
-            <div class="ea-col-8"><h1>Text</h1></div>
-            <div class="ea-col-4">
+        <section class="hero ea-grid">
+            <div class="ea-col-12 ea-col-xs-12 hero-title-container">
+                <h1 id="currentCategoryText">All</h1>
+                <div id="sortCategorySelectbox" class="custom-selectbox-wrapper">
+                    <div id="custom-selectbox-selected">
+                        <div class="sort-by">
+                            Sort by:
+                        </div>
+                        <div id="currentSortFilter">
+                            Relevance
+                        </div>
+                    </div>
+                    <div id="" class="custom-selectbox-option" data-sort-value="price-asc" data-sort-title="$ (Ascending)">
+                        <div class="text">
+                            $ (Ascending)
+                        </div>
+                    </div>
+                    <div id="" class="custom-selectbox-option" data-sort-value="price-desc" data-sort-title="$ (Descending)">
+                        <div class="text">
+                            $ (Descending)
+                        </div>
+                    </div>
+                    <div id="" class="custom-selectbox-option" data-sort-value="a-to-z" data-sort-title="A -> Z">
+                        <div class="text">
+                            A -> Z
+                        </div>
+                    </div>
+                    <div id="" class="custom-selectbox-option" data-sort-value="z-to-a" data-sort-title="Z -> A">
+                        <div class="text">
+                            Z -> A
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section id="section-all-products" class="ea-grid">
+            <div class="card-skeleton ea-col-3 ea-col-xs-12">
+                <div class="image-skeleton"></div>
+                <div class="title-skeleton"></div>
+                <div class="price-skeleton"></div>
+            </div>
+            <div class="card-skeleton ea-col-3 ea-col-xs-12">
+                <div class="image-skeleton"></div>
+                <div class="title-skeleton"></div>
+                <div class="price-skeleton"></div>
+            </div>
+            <div class="card-skeleton ea-col-3 ea-col-xs-12">
+                <div class="image-skeleton"></div>
+                <div class="title-skeleton"></div>
+                <div class="price-skeleton"></div>
+            </div>
+            <div class="card-skeleton ea-col-3 ea-col-xs-12">
+                <div class="image-skeleton"></div>
+                <div class="title-skeleton"></div>
+                <div class="price-skeleton"></div>
+            </div>
+            <div class="card-skeleton ea-col-3 ea-col-xs-12">
+                <div class="image-skeleton"></div>
+                <div class="title-skeleton"></div>
+                <div class="price-skeleton"></div>
+            </div>
+            <div class="card-skeleton ea-col-3 ea-col-xs-12">
+                <div class="image-skeleton"></div>
+                <div class="title-skeleton"></div>
+                <div class="price-skeleton"></div>
+            </div>
+            <div class="card-skeleton ea-col-3 ea-col-xs-12">
+                <div class="image-skeleton"></div>
+                <div class="title-skeleton"></div>
+                <div class="price-skeleton"></div>
+            </div>
+            <div class="card-skeleton ea-col-3 ea-col-xs-12">
+                <div class="image-skeleton"></div>
+                <div class="title-skeleton"></div>
+                <div class="price-skeleton"></div>
+            </div>
+            <div class="card-skeleton ea-col-3 ea-col-xs-12">
+                <div class="image-skeleton"></div>
+                <div class="title-skeleton"></div>
+                <div class="price-skeleton"></div>
+            </div>
+            <div class="card-skeleton ea-col-3 ea-col-xs-12">
+                <div class="image-skeleton"></div>
+                <div class="title-skeleton"></div>
+                <div class="price-skeleton"></div>
+            </div>
+            <div class="card-skeleton ea-col-3 ea-col-xs-12">
+                <div class="image-skeleton"></div>
+                <div class="title-skeleton"></div>
+                <div class="price-skeleton"></div>
+            </div>
+            <div class="card-skeleton ea-col-3 ea-col-xs-12">
+                <div class="image-skeleton"></div>
+                <div class="title-skeleton"></div>
+                <div class="price-skeleton"></div>
+            </div>
         </section>
     </main>
     <script src="src/fetch.js" type="module"></script>
