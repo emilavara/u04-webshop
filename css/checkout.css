@@ -98,6 +98,7 @@ ul li:hover {
     display:-webkit-flex;
     display:-ms-flexbox;
     display:flex;
+    flex-direction: column;
     -webkit-box-pack:center;
     -webkit-justify-content:center;
     -ms-flex-pack:center;
@@ -129,7 +130,7 @@ ul li:hover {
 }
 .order-info-content {
     table-layout:fixed;
-
+    overflow-y:scroll;
 }
 
 .full-width {

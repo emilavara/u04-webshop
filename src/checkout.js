@@ -42,3 +42,39 @@ else if (e.target.className !== 'dropdown-btn' && activeDropdown) {
         activeDropdown = null;
 }
 }
+
+let cart = JSON.parse(localStorage.getItem('cart'))
+console.log(cart)
+let orderInfoElement = document.querySelector('.order-info-content')
+
+orderInfoElement.innerHTML = cart.map(item =>
+    `<table class='order-table'>
+            <tbody>
+                <tr>
+                <td><img src='${item.image}' class='full-width'></img>
+                </td>
+                <td>
+                    <br> <span class='thin'>${item.title}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <div class='price'>$${item.price}</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div class='line'></div>`
+).join('')
+
+let orderTotalPrice = document.getElementById('totalPrice')
+
+const array1 = [1, 2, 3, 4];
+
+const sumWithInitial = cart.reduce(
+    (accumulator, currentValue) => accumulator + currentValue.price, 0,
+);
+
+console.log(sumWithInitial)
+
+orderTotalPrice.innerHTML = `<h3 style = ""> Total Price <span>$${sumWithInitial.toFixed(2)}</span></h3>`
