@@ -6,11 +6,12 @@ header {
     display: flex;
     flex-direction: column;
     border-top: 0.25rem var(--primary-color) solid;
-    position: relative;
     position: fixed;
     background-color: var(--bg-color);
     z-index: 3;
     top: 0;
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
 
     @media (max-width: 1432px) {
         padding-left: 1rem;
