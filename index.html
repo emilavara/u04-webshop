@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KTLEETK5ZF"></script>
@@ -21,13 +21,13 @@
                 <h6>shopshopshop</h6>
             </div>
             <div class="input-container">
-                <input type="text" name="" id="filter-products">
+                <input placeholder="Search..." type="text" name="" id="filter-products">
             </div>
             <div class="button-container">
                 <a class="cart-btn" href="checkout.html">
                     <i class="bi bi-bag"></i>
-                    <div class="cart-items">8</div>
-                </a>
+                     <div id="cartCountButton" class="cart-items">0</div>
+              </a>
                 <button><i class="bi bi-person"></i></button>
             </div>
         </div>
@@ -53,17 +53,146 @@
                 <span>Electronics</span>
             </label>
         </div>
+      </div>
     </header>
     <main>
-        <section class="thing ea-grid" style="padding: 0;">
-            <div class="ea-col-8"><h1>Text</h1></div>
-            <div class="ea-col-4">
+        <section class="hero ea-grid">
+            <div class="ea-col-12 ea-col-xs-12 hero-title-container">
+                <h1 id="currentCategoryText">All</h1>
+                <div id="sortCategorySelectbox" class="custom-selectbox-wrapper">
+                    <div id="custom-selectbox-selected">
+                        <div class="sort-by">
+                            Sort by:
+                        </div>
+                        <div id="currentSortFilter">
+                            Relevance
+                        </div>
+                    </div>
+                    <div id="" class="custom-selectbox-option" data-sort-value="price-asc" data-sort-title="$ (Ascending)">
+                        <div class="text">
+                            $ (Ascending)
+                        </div>
+                    </div>
+                    <div id="" class="custom-selectbox-option" data-sort-value="price-desc" data-sort-title="$ (Descending)">
+                        <div class="text">
+                            $ (Descending)
+                        </div>
+                    </div>
+                    <div id="" class="custom-selectbox-option" data-sort-value="a-to-z" data-sort-title="A -> Z">
+                        <div class="text">
+                            A -> Z
+                        </div>
+                    </div>
+                    <div id="" class="custom-selectbox-option" data-sort-value="z-to-a" data-sort-title="Z -> A">
+                        <div class="text">
+                            Z -> A
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section id="section-all-products" class="ea-grid">
+            <div class="card-skeleton ea-col-3 ea-col-xs-12">
+                <div class="image-skeleton"></div>
+                <div class="title-skeleton"></div>
+                <div class="price-skeleton"></div>
+            </div>
+            <div class="card-skeleton ea-col-3 ea-col-xs-12">
+                <div class="image-skeleton"></div>
+                <div class="title-skeleton"></div>
+                <div class="price-skeleton"></div>
+            </div>
+            <div class="card-skeleton ea-col-3 ea-col-xs-12">
+                <div class="image-skeleton"></div>
+                <div class="title-skeleton"></div>
+                <div class="price-skeleton"></div>
+            </div>
+            <div class="card-skeleton ea-col-3 ea-col-xs-12">
+                <div class="image-skeleton"></div>
+                <div class="title-skeleton"></div>
+                <div class="price-skeleton"></div>
+            </div>
+            <div class="card-skeleton ea-col-3 ea-col-xs-12">
+                <div class="image-skeleton"></div>
+                <div class="title-skeleton"></div>
+                <div class="price-skeleton"></div>
+            </div>
+            <div class="card-skeleton ea-col-3 ea-col-xs-12">
+                <div class="image-skeleton"></div>
+                <div class="title-skeleton"></div>
+                <div class="price-skeleton"></div>
+            </div>
+            <div class="card-skeleton ea-col-3 ea-col-xs-12">
+                <div class="image-skeleton"></div>
+                <div class="title-skeleton"></div>
+                <div class="price-skeleton"></div>
+            </div>
+            <div class="card-skeleton ea-col-3 ea-col-xs-12">
+                <div class="image-skeleton"></div>
+                <div class="title-skeleton"></div>
+                <div class="price-skeleton"></div>
+            </div>
+            <div class="card-skeleton ea-col-3 ea-col-xs-12">
+                <div class="image-skeleton"></div>
+                <div class="title-skeleton"></div>
+                <div class="price-skeleton"></div>
+            </div>
+            <div class="card-skeleton ea-col-3 ea-col-xs-12">
+                <div class="image-skeleton"></div>
+                <div class="title-skeleton"></div>
+                <div class="price-skeleton"></div>
+            </div>
+            <div class="card-skeleton ea-col-3 ea-col-xs-12">
+                <div class="image-skeleton"></div>
+                <div class="title-skeleton"></div>
+                <div class="price-skeleton"></div>
+            </div>
+            <div class="card-skeleton ea-col-3 ea-col-xs-12">
+                <div class="image-skeleton"></div>
+                <div class="title-skeleton"></div>
+                <div class="price-skeleton"></div>
+            </div>
         </section>
     </main>
+    <footer class="">
+      <div class="top-container ea-grid">
+        <div class="payment ea-col-4 ea-col-xs-12">
+          <h3>Betalningsalternativ</h3>
+          <img
+            src="/img/creditcard.png"
+            width="90"
+            height="auto"
+            alt=""
+            class="creditcard"
+          />
+          <p>
+            Din beställning blir juridiskt bindande först när vi har bekräftat
+            din order via mejlet "orderbekräftelse och kvitto", i enlighet med
+            våra försäljnings- och leveransvillkor.
+          </p>
+        </div>
+
+        <div class="delivery ea-col-4 ea-col-xs-12">
+          <h3>Leverans</h3>
+          <img src="/img/Bring-logo-1.png" width="100" alt="" />
+          <img src="/img/postnord-logo-png-6.png" width="140" alt="" />
+        </div>
+
+        <div class="follow ea-col-4 ea-col-xs-12">
+          <h3>Följ oss</h3>
+          <i class="bi bi-facebook"></i>
+          <i class="bi bi-instagram"></i>
+        </div>
+      </div>
+      <div class="bottom-container">
+        <p>Trygg & bekymmersfri shopping</p>
+        <img src="/img/payment.png" alt="" width="275" />
+      </div>
+    </footer>
     <script src="src/fetch.js" type="module"></script>
     <script src="src/index.js" type="module"></script>
     <script src="src/Scroll.js" type="module"></script>
+  </body>
+</html>
 </body>
 </html>

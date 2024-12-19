@@ -1,28 +1,41 @@
-@import url('./variables.css');
-@import url('./fonts.css');
-@import url('./typography.css');
-@import url('./ea-grid.css');
-@import url('./buttons.css');
-@import url('./layout.css');
-@import url('./header.css');
+@import url("./variables.css");
+@import url("./fonts.css");
+@import url("./typography.css");
+@import url("./ea-grid.css");
+@import url("./buttons.css");
+@import url("./layout.css");
+@import url("./header.css");
+@import url("./footer.css");
 
 html {
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
 
-body {
-    margin: 0;
-    padding: 0;
-    background-color: var(--bg-color);
-    font-family: 'Inter';
+    @media (min-width: 1920px) {
+        font-size: 16px;
+    }
 
-    &::-webkit-scrollbar {
-        display: none;
+    @media (max-width: 1464px) {
+        font-size: 1.09vw;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 16px;
     }
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  font-family: "Inter";
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }

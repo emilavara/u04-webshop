@@ -17,3 +17,13 @@ async function getProducts() {
 
 //export products array, wait for getProducts() to finish
 export const products = await getProducts();
+
+export function getCartCount() {
+    let cartCountButton = document.getElementById('cartCountButton')
+    let cart = JSON.parse(localStorage.getItem('cart'))
+    cartCountButton.textContent = cart.length 
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    getCartCount();
+})

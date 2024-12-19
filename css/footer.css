@@ -1,0 +1,69 @@
+footer {
+  background-color: #f5f5f5;
+
+  .top-container {
+    /* padding: 30px 0; */
+    padding-left: calc(50vw - 1400px / 2);
+    padding-right: calc(50vw - 1400px / 2);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+
+    justify-content: space-around;
+
+    background-color: #f5f5f5;
+
+    h3 {
+      text-align: center;
+      text-transform: capitalize;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      font-weight: 500;
+    }
+
+    .payment {
+      margin: auto;
+      text-align: center;
+
+      .creditcard {
+        margin-top: 10px;
+      }
+    }
+
+    .delivery {
+      margin: 0 auto;
+      margin-top: 30px;
+    }
+
+    .follow {
+      margin: 0 auto;
+      margin-top: 30px;
+
+      h3 {
+        margin-bottom: 15px;
+      }
+      i {
+        font-size: 30px;
+        padding-right: 5px;
+      }
+    }
+  }
+}
+
+.bottom-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #212121;
+  color: #fff;
+  padding: 30px 0;
+  text-align: center;
+
+  p {
+    text-align: center;
+    width: 100%;
+  }
+
+  img {
+    margin: auto;
+  }
+}
