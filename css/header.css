@@ -6,11 +6,12 @@ header {
     display: flex;
     flex-direction: column;
     border-top: 4px var(--primary-color) solid;
-    position: relative;
     position: fixed;
     background-color: var(--bg-color);
     z-index: 1;
     top: 0;
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
 
     .top-container {
         height: 4rem;
@@ -103,6 +104,7 @@ header {
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: 2rem;
         
         ul {
             margin: 0;
@@ -121,6 +123,32 @@ header {
                     padding: 0.15rem 0.75rem;
                     border-radius: 4px;
                 }
+            }
+        }
+
+        label {
+            width: fit-content;
+            cursor: pointer;
+
+            input[type=radio] {
+                appearance: none;
+                display: none;
+
+                &:checked {
+                    ~ span {
+                        background-color: var(--primary-color);
+                        color: white;
+                        padding: 0.15rem 0.55rem;
+                        border-radius: 4px;
+                    }
+                }
+            }
+
+            span {
+                background-color: transparent;
+                transition: all 0.1s ease;
+                font-weight: 600;
+                padding: 0.15rem 0.55rem;
             }
         }
     }

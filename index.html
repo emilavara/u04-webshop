@@ -4,25 +4,54 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/main.css" />
-  </head>
-  <body>
+    <link rel="stylesheet" href="css/main.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KTLEETK5ZF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-KTLEETK5ZF');
+    </script>
+</head>
+<body>
     <header>
-      <div class="top-container">
-        <div class="logo-container">
-          <h6>shopshopshop</h6>
+        <div class="top-container">
+            <div class="logo-container">
+                <h6>shopshopshop</h6>
+            </div>
+            <div class="input-container">
+                <input type="text" name="" id="filter-products">
+            </div>
+            <div class="button-container">
+                <button class="cart-btn">
+                    <i class="bi bi-bag"></i>
+                    <div class="cart-items">8</div>
+                </button>
+                <button><i class="bi bi-person"></i></button>
+            </div>
         </div>
-        <div class="input-container">
-          <input type="text" name="" id="" />
-        </div>
-        <div class="button-container">
-          <!-- <i class="bi bi-bag"></i>
-                <i class="bi bi-person"></i> -->
-          <button class="cart-btn">
-            <i class="bi bi-bag"></i>
-            <div class="cart-items">2</div>
-          </button>
-          <button><i class="bi bi-person"></i></button>
+        <div class="category-container">
+            <label>
+                <input type="radio" name="category" value="all" checked>
+                <span>All</span>
+            </label>
+            <label>
+                <input type="radio" name="category" value="men's clothing">
+                <span>Men's Clothing</span>
+            </label>
+            <label>
+                <input type="radio" name="category" value="women's clothing">
+                <span>Women's Clothing</span>
+            </label>
+            <label>
+                <input type="radio" name="category" value="jewelery">
+                <span>Jewelery</span>
+            </label>
+            <label>
+                <input type="radio" name="category" value="electronics">
+                <span>Electronics</span>
+            </label>
         </div>
       </div>
       <div class="category-container">
@@ -36,7 +65,12 @@
       </div>
     </header>
     <main>
-      <section id="section-all-products" class="ea-grid"></section>
+        <section class="thing ea-grid" style="padding: 0;">
+            <div class="ea-col-8"><h1>Text</h1></div>
+            <div class="ea-col-4">
+        </section>
+        <section id="section-all-products" class="ea-grid">
+        </section>
     </main>
     <footer class="">
       <div class="top-container ea-grid">
@@ -75,5 +109,8 @@
     </footer>
     <script src="src/fetch.js" type="module"></script>
     <script src="src/index.js" type="module"></script>
+    <script src="src/Scroll.js" type="module"></script>
   </body>
+</html>
+</body>
 </html>
