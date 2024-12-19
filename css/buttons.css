@@ -2,11 +2,11 @@
     font-size: 1rem;
     font-family: 'Inter';
     border: none;
-    padding: 1rem 8rem;
+    padding: 1rem 0;
     font-weight: 600;
     letter-spacing: -0.02em;
     border-radius: 8px;
-    width: fit-content;
+    width: 21.125rem;
     transition: background-color 0.2s ease;
     cursor: pointer;
 

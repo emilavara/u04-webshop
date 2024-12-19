@@ -8,9 +8,21 @@
 @import url("./footer.css");
 
 html {
-  font-size: 16px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    @media (min-width: 1920px) {
+        font-size: 16px;
+    }
+
+    @media (max-width: 1464px) {
+        font-size: 1.09vw;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 16px;
+    }
 }
 
 body {
