@@ -163,6 +163,14 @@ renderProducts(products);
 
 const goToCheckoutBtn = document.getElementById("cart-btn");
 goToCheckoutBtn.addEventListener("click", () => {
-  console.log("clicked");
+  gtag('event', 'went_to_checkout', {
+    'event_label': 'user went to checkout'
+  });
+
   window.location.href = "checkout.html";
+});
+
+gtag('event', 'loaded_page', {
+  'app_name': 'shopshopshop',
+  'page_name': 'Home'
 });

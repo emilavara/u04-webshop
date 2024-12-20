@@ -78,3 +78,8 @@ const sumWithInitial = cart.reduce(
 console.log(sumWithInitial)
 
 orderTotalPrice.innerHTML = `<h3 style = ""> Total Price <span>$${sumWithInitial.toFixed(2)}</span></h3>`
+
+gtag('event', 'loaded_page', {
+    'app_name': 'shopshopshop',
+    'page_name': 'checkout'
+  });

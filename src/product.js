@@ -113,6 +113,12 @@ if (localStorage.getItem("cart") === null) {
 renderProduct();
 
 function addItemToCart(e, id) {
+  gtag('event', 'add_to_cart', {
+    'event_category': 'products',
+    'event_label': products[id].title,
+    'value': 1
+  });
+
   //init empty array
   let cart = [];
 
@@ -126,10 +132,20 @@ function addItemToCart(e, id) {
   localStorage.setItem("cart", JSON.stringify(cart));
 
   getCartCount();
+
+  
 }
 
 const goToCheckoutBtn = document.getElementById("cart-btn");
 goToCheckoutBtn.addEventListener("click", () => {
-  console.log("clicked");
+  gtag('event', 'went_to_checkout', {
+    'event_label': 'user went to checkout'
+  });
+
   window.location.href = "checkout.html";
+});
+
+gtag('event', 'loaded_page', {
+  'app_name': 'shopshopshop',
+  'page_name': 'products'
 });
