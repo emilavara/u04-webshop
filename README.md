@@ -1,3 +1,12 @@
+## Live-länk: 
+
+## Reflektion
+### Styrkor och svagheter
+ I team-anda satt vi tillsammans och fick till designen på webbshoppen ganska så fint. Utmaning där var när vi skulle tekniskt lösa utformningen designmässigt av kategori-delen i vår produkts - card. Men vi löste det fint!
+
+### Händelsespårning
+I händelsespårning har vi möjlighet att spåra besökarens interaktion med sidan. T.ex lägg-i-varukorgen klick. Det kan också vara passiva händelsespårning, som hur länge besökare stannar på en viss sida. Inställningar av händelsespårning baserat på oss-väljare är inte det mest pålitliga sättet. Hela händelseinställningen kommer att sluta fungera om sec-väljare inte fungerar. En onclick händelsehanterare till element, är de som rekommenderas.
+
 ## **Webshoppen del 1**
 
 Det här ett spännande och praktiskt uppdrag där vi ska skapa en enkel men funktionell webbshop! I detta projekt kommer ni att bygga en webbplats för en fiktiv butik som säljer ett urval av produkter. Målet är att ge er praktisk erfarenhet av webbutveckling och att använda JavaScript för att manipulera data och skapa en interaktiv användarupplevelse.
