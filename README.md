@@ -1,4 +1,4 @@
-## Live-länk: 
+## Live-länk: https://u04-webshop-team-5.netlify.app/
 
 ## Reflektion
 ### Styrkor och svagheter
